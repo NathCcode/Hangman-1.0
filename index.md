@@ -7,9 +7,6 @@ How to play:
 (easy, medium, hard)
 3.) start guessing letters. Think you got the word? type it all in!
 ### THE CODE!
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
 ```markdown
 Syntax highlighted code block
 
