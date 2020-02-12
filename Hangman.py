@@ -14,7 +14,6 @@
 
 #Start
 def main():
-    print('Conner is thinking of a word.')
     q = input('would you like to play a game of hangman?yes/no:')
         
     if q =='yes':
