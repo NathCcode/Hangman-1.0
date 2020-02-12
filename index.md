@@ -1,37 +1,129 @@
-## Welcome to GitHub Pages
+## Thanks for checking out my hangman program!
 
-You can use the [editor on GitHub](https://github.com/NathCcode/Hangman-1.0/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+How to play:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
+1.)it will ask you if you want to play(yes,no)
+2.)choose a difficuly(e,m,h)
+(easy, medium, hard)
+3.) start guessing letters. Think you got the word? type it all in!
+### THE CODE!
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
 Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+#Hangman 1.0
+#by Nathan
 
-- Bulleted
-- List
+#how to play
+#---------------------------------------------------------------------------------
+#imput 1 letter at a time
+#if you think you got the word put the whole word e.g
 
-1. Numbered
-2. List
+#'-''e''l'l''-'
+ #hello
+#you win!
 
-**Bold** and _Italic_ and `Code` text
+#----------------------------------------------------------------------------------------------------------
 
-[Link](url) and ![Image](src)
+#Start
+def main():
+    q = input('would you like to play a game of hangman?yes/no:')
+        
+    if q =='yes':
+            
+        def game( ):
+            #decides a random word in the list
+            import random
+            x = random.uniform(0,5)
+            X= round(x)
+
+            d = input('select difficulty. Easy,Medium,hard' '(e,m,h):')
+            if d == 'e':
+                words =['seven', 'pizza', 'happy', 'again']
+            if d == 'm':
+                words =['glyph','shift','drift','sifts','lifts']
+            if d == 'h':
+                words = ['ivory','banjo','rouge','crypt','jiffy','haiku','kiosk','pixel',]
+            
+            L =list(words[X])
+            #calculates number of words
+            dashes =  '-----'
+            
+            D = list(dashes)
+            
+            print(D)
+            #word replacement system
+            #10 = number of turns allowed in hangman
+            for i in range(10):
+            
+                original = dashes
+            
+                answer = input('guess a word/letter:')
+            #1
+                if answer == L[0]:
+                    search = L.index(answer)
+                    print(search)
+                    print("you got a word") 
+                    D[0] = answer
+                     
+            #2
+                if answer == L[1]:
+                    search = L.index(answer)
+                    print(search)
+                    print("you got a word")
+                    D[1] = answer
+                     
+            #3    
+        
+                if answer == L[2]:
+                    search = L.index(answer)
+                    print(search)
+                    print("you got a word")
+                    D[2] = answer
+                     
+            #4   
+                if answer == L[3]:
+                    search = L.index(answer)
+                    print(search)
+                    print("you got a word")
+                    D[3] = answer
+                     
+            #5
+                if answer == L[4]:
+                    search = L.index(answer)
+                    print(search)
+                    print("you got a word")
+                    D[4] = answer
+                        
+                print(D)
+            
+#win/loose decision                
+                if answer not in L:
+                    print('wrong word')
+                
+                A = list(answer)
+                
+                p2 = print(A)
+                
+                if D == L:
+                    print('you win!')
+                    exit()
+                  
+                if A == L:
+                    print('you win!')
+                    exit()
+
+#loose decision
+            print('you loose')
+            print('the word was ' +  words[X])
+            exit()
+ 
+                
+        game()
+main()
+
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/NathCcode/Hangman-1.0/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### if there are any bugs, lmk and i will try fix it, or if you have any ideas, feel free to share!
