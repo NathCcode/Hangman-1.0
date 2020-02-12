@@ -15,7 +15,7 @@ Syntax highlighted code block
 
 #how to play
 #---------------------------------------------------------------------------------
-#imput 1 letter at a time
+#input 1 letter at a time
 #if you think you got the word put the whole word e.g
 
 #'-''e''l'l''-'
